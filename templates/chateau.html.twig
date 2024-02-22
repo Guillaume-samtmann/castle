@@ -1,0 +1,8 @@
+{% extends 'chateaux.html.twig' %}
+{% block chateau %}
+    {% if chateau ?? false %}
+        <h2>{{ chateau.titre }}</h2>
+        <img src="{{ chateau.url }}" alt="{{ chateau.titre }}" style="max-width:600px; max-height: 480px;">
+        <p>{{ chateau.txt }}</p>
+    {% endif %}
+{% endblock %}

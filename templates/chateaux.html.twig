@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <nav>
+        <a href="{{ path('home') }}">Accueil</a>
+        <a href="{{ path('apropos') }}">A Propos</a>
+        <a href="{{ path('chateaux') }}">Chateaux</a>
+        <a href="{{ path('number', {id:1}) }}">Affiche 1</a>
+        <a href="{{ path('number', {id:2}) }}">Affiche 2</a>
+    </nav>
+
+    <ul>
+        {% for chateau in chateaux %}
+            <li><a href="{{ path('chateau_show', {id:chateau.id}) }}">Chateau {{ chateau.titre }}</a></li>
+        {% endfor %}
+    </ul>
+    {% block chateau %}
+    {% endblock %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>{{ titre }}</h1>
+    <p>{{ paragraphe }}</p>
+    <nav>
+        <a href="{{ path('home') }}">Accueil</a>
+        <a href="{{ path('apropos') }}">A Propos</a>
+        <a href="{{ path('chateaux') }}">Chateaux</a>
+        <a href="{{ path('number', {id:1}) }}">Affiche 1</a>
+        <a href="{{ path('number', {id:2}) }}">Affiche 2</a>
+    </nav>
+    <p> {{ message }}</p>
+{% endblock %}
